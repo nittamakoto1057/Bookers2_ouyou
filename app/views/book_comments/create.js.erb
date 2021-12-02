@@ -1,3 +1,4 @@
-$('textarea').val('')
+$('#comment__textarea').val('')
+    //↑cssの指定方法と同じ,デバッグ前は送信ボタンにidが指定されていたため動かなかった。’textarea’というふうにhtmlのタグ名でもOK
 $('.detail__table').html("<%= j(render 'books/detail', book: @comment.book) %>")
 $('.comment__table').html("<%= j(render 'book_comments/table', book_comments: @comment.book.book_comments ) %>")
